@@ -21,8 +21,7 @@ def get_google_results(search, page=0):
     for result in results:
         dump = result.text.split("\n")
         output.append(dump)
-    print(json.dumps(output, ensure_ascii=False).encode('utf-8').decode('utf-8'))
-    return 0
+    return json.dumps(output, ensure_ascii=False).encode('utf-8').decode('utf-8')
 
 if __name__ == "__main__":
     get_google_results("github lupin012345", 1)
